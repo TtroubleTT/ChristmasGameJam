@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private CharacterController controller;
-    [SerializeField] private Animator animator;
+    [SerializeField] private AnimationManager animationManager;
 
     [Header("Speed")]
     [SerializeField] private float walkSpeed = 12f;
@@ -44,10 +44,16 @@ public class PlayerMovement : MonoBehaviour
 
     // Movement States
     [HideInInspector] public MovementState movementState;
+    private float _movementX = 0f;
+    private float _movementY = 0f;
 
     public enum MovementState
     {
+        Idle,
         Walking,
+        WalkingBackwards,
+        WalkingRight,
+        WalkingLeft,
         Sprinting,
         Crouching,
         Air,
@@ -62,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _startYScale = transform.localScale.y;
+        animationManager = GetComponent<AnimationManager>();
     }
 
     private void Update()
@@ -96,6 +103,10 @@ public class PlayerMovement : MonoBehaviour
             movementState = MovementState.Crouching;
             _currentSpeed = crouchSpeed;
         }
+        else if (_isGrounded && (_movementY < 0.3f && _movementY > -0.3f) && (_movementX < 0.3f && _movementX > -0.3f))
+        {
+            movementState = MovementState.Idle;
+        }
         else if (_isGrounded && Input.GetKey(sprintKey))
         {
             movementState = MovementState.Sprinting;
@@ -103,7 +114,23 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (_isGrounded)
         {
-            movementState = MovementState.Walking;
+            if (_movementY < 0)
+            {
+                movementState = MovementState.WalkingBackwards;
+            }
+            else if (_movementX > .3f)
+            {
+                movementState = MovementState.WalkingRight;
+            }
+            else if (_movementX < -.3f)
+            {
+                movementState = MovementState.WalkingLeft;
+            }
+            else
+            {
+                movementState = MovementState.Walking;
+            }
+            
             _currentSpeed = walkSpeed;
         }
         else
@@ -135,11 +162,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveInDirection()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        
+        _movementX = Input.GetAxis("Horizontal");
+        _movementY = Input.GetAxis("Vertical");
+
         Transform myTransform = transform;
-        Vector3 move = myTransform.right * x + myTransform.forward * z; // This makes it so its moving locally so rotation is taken into consideration
+        Vector3 move = myTransform.right * _movementX + myTransform.forward * _movementY; // This makes it so its moving locally so rotation is taken into consideration
 
         controller.Move(move * (_currentSpeed * Time.deltaTime)); // Moving in the direction of move at the speed
     }
@@ -195,6 +222,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_isCrouching && !Input.GetKey(crouchKey) && !IsUnderObject())
         {
+            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Idle);
             Vector3 localScale = transform.localScale;
             transform.localScale = new Vector3(localScale.x, _startYScale, localScale.z);
             _isCrouching = false;
