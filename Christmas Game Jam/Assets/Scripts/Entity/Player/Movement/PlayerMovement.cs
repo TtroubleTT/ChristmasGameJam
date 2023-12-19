@@ -56,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
         WalkingLeft,
         Sprinting,
         Crouching,
+        CrouchWalkForward,
+        CrouchWalkBackWard,
         Air,
         Falling,
     }
@@ -100,7 +102,19 @@ public class PlayerMovement : MonoBehaviour
         // Determines the movement state and speed based on different conditions
         if (_isCrouching)
         {
-            movementState = MovementState.Crouching;
+            if (_movementY > .1f)
+            {
+                movementState = MovementState.CrouchWalkForward;
+            }
+            else if (_movementY < -.1f)
+            {
+                movementState = MovementState.CrouchWalkBackWard;
+            }
+            else
+            {
+                movementState = MovementState.Crouching;
+            }
+
             _currentSpeed = crouchSpeed;
         }
         else if (_isGrounded && (_movementY < 0.3f && _movementY > -0.3f) && (_movementX < 0.3f && _movementX > -0.3f))
@@ -177,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
         {
             switch (_isGrounded || movementState == MovementState.Falling)
             {
-                case true when movementState != MovementState.Crouching:
+                case true when movementState != MovementState.Crouching || movementState != MovementState.CrouchWalkForward || movementState != MovementState.CrouchWalkBackWard:
                     _jumped = true;
                     DoJump();
                     break;
@@ -222,7 +236,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_isCrouching && !Input.GetKey(crouchKey) && !IsUnderObject())
         {
-            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Idle);
             Vector3 localScale = transform.localScale;
             transform.localScale = new Vector3(localScale.x, _startYScale, localScale.z);
             _isCrouching = false;
