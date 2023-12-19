@@ -56,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
         CrouchWalkForward,
         CrouchWalkBackWard,
         Air,
-        Falling,
     }
 
     public bool IsGrounded()
@@ -177,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(jumpKey) && _isGrounded)
         {
+            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Jump);
             DoJump();
         }
     }

@@ -22,6 +22,7 @@ public class AnimationManager : MonoBehaviour
         Crouch,
         CrouchWalkForward,
         CrouchWalkBackward,
+        Jump,
     }
 
     private Dictionary<AnimationManager.AnimationType, string> _animations = new()
@@ -37,7 +38,8 @@ public class AnimationManager : MonoBehaviour
         { AnimationType.RunLeft, "RunStrafeLeft"},
         { AnimationType.Crouch, "StealthIdle"},
         { AnimationType.CrouchWalkForward, "StealthWalk"},
-        { AnimationType.CrouchWalkBackward, "StealthWalkBack"}
+        { AnimationType.CrouchWalkBackward, "StealthWalkBack"},
+        { AnimationType.Jump, "Freefall"}
     };
 
     private Dictionary<PlayerMovement.MovementState, AnimationManager.AnimationType> _movements = new()
@@ -51,6 +53,7 @@ public class AnimationManager : MonoBehaviour
         { PlayerMovement.MovementState.Crouching, AnimationType.Crouch},
         { PlayerMovement.MovementState.CrouchWalkForward, AnimationType.CrouchWalkForward},
         { PlayerMovement.MovementState.CrouchWalkBackWard, AnimationType.CrouchWalkBackward},
+        { PlayerMovement.MovementState.Air, AnimationType.Jump},
     };
 
     private void Update()
