@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2651521465506880274
+--- !u!1 &1963145974142163094
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2648260741214716902}
-  - component: {fileID: 3817509427609951711}
-  - component: {fileID: 1089276603772381498}
-  - component: {fileID: 2684606419580197250}
+  - component: {fileID: 8992265002036349583}
+  - component: {fileID: 4372316138767799991}
+  - component: {fileID: 8330811831069149302}
+  - component: {fileID: 1851252621593630236}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2648260741214716902
+--- !u!4 &8992265002036349583
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651521465506880274}
+  m_GameObject: {fileID: 1963145974142163094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.722, z: 0.112}
+  m_LocalPosition: {x: 0, y: 1.563, z: 0.332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4521463753401263252}
+  m_Father: {fileID: 7816995541118317609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &3817509427609951711
+--- !u!20 &4372316138767799991
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651521465506880274}
+  m_GameObject: {fileID: 1963145974142163094}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -85,13 +85,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1089276603772381498
+--- !u!114 &8330811831069149302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651521465506880274}
+  m_GameObject: {fileID: 1963145974142163094}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddbfcff56a1ebcd499d1f9360c504a75, type: 3}
@@ -100,13 +100,13 @@ MonoBehaviour:
   mouseXSensitivity: 300
   mouseYSensitivity: 300
   playerBody: {fileID: 4521463753401263252}
---- !u!81 &2684606419580197250
+--- !u!81 &1851252621593630236
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651521465506880274}
+  m_GameObject: {fileID: 1963145974142163094}
   m_Enabled: 1
 --- !u!1001 &5649683696578645699
 PrefabInstance:
@@ -167,9 +167,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2457902601598515946, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2648260741214716902}
+      addedObject: {fileID: 8992265002036349583}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8904481353477386477, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       insertIndex: -1
@@ -247,5 +247,10 @@ Transform:
 --- !u!4 &6363080863414850990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1596949614207916909, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+  m_PrefabInstance: {fileID: 5649683696578645699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7816995541118317609 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2457902601598515946, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
   m_PrefabInstance: {fileID: 5649683696578645699}
   m_PrefabAsset: {fileID: 0}
