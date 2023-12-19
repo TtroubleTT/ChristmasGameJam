@@ -17,7 +17,6 @@ public class BonkStick : MonoBehaviour, ICombat
     {
         if (Input.GetKeyDown(attackKey))
         {
-            Debug.Log("attack");
             bonkAnimator.Play("BonkStickSwing");
             Attack();
         }
