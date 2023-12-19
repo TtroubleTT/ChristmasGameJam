@@ -10,6 +10,6 @@ public class AnimationTest : MonoBehaviour
 
     private void Start()
     {
-        animator.Play(stateName);
+        animator.Play("Walk");
     }
 }

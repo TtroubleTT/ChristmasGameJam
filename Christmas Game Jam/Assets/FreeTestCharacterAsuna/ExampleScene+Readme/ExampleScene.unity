@@ -478,6 +478,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 152469943617048025, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2520084086980547474, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}
       propertyPath: m_Name
       value: FreeTestCharacterAsunaMasterPrefab
@@ -522,8 +526,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 5923142769216251734, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}
+    - {fileID: 3740242085927895512, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}
+    - {fileID: 152469943617048025, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}
+    - {fileID: 179030725623347107, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 8052109448608310991, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d14c5c712f34c84aa02e453c35dd626, type: 3}

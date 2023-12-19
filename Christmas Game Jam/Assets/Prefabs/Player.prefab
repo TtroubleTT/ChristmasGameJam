@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6871207951342778382}
   - component: {fileID: 7219534657761577426}
-  - component: {fileID: 4262247738126283934}
   - component: {fileID: 2661011879205049314}
   m_Layer: 0
   m_Name: PlayerCamera
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8052109448608310991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.66, z: 0}
+  m_LocalPosition: {x: 0, y: 1.708, z: 0.084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,14 +84,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4262247738126283934
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052109448608310991}
-  m_Enabled: 1
 --- !u!114 &2661011879205049314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8904481353477386477, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -184,6 +179,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8904481353477386477, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 152469943617048025}
+    - targetCorrespondingSourceObject: {fileID: 8904481353477386477, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 179030725623347107}
   m_SourcePrefab: {fileID: 100100000, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
 --- !u!1 &2520084086980547474 stripped
 GameObject:
@@ -271,8 +269,22 @@ MonoBehaviour:
   useGravity: 1
   velocity: {x: 0, y: 0, z: 0}
   jumpHeight: 4
-  crouchYScale: 0.5
+  crouchYScale: 0.4
   movementState: 0
+--- !u!114 &179030725623347107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520084086980547474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b776db9e22d416c419a63aee8e39546b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9174640960349049682}
+  stateName: Walk
 --- !u!4 &3004731686482561320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
@@ -281,5 +293,10 @@ Transform:
 --- !u!4 &5711602860941359122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1596949614207916909, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+  m_PrefabInstance: {fileID: 6443016904315298687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &9174640960349049682 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2754213839197597741, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
   m_PrefabInstance: {fileID: 6443016904315298687}
   m_PrefabAsset: {fileID: 0}
