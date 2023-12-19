@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private CharacterController controller;
-    [SerializeField] private Animator animator;
+    [SerializeField] private AnimationManager animationManager;
 
     [Header("Speed")]
     [SerializeField] private float walkSpeed = 12f;
@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _startYScale = transform.localScale.y;
+        animationManager = GetComponent<AnimationManager>();
     }
 
     private void Update()
@@ -179,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
         // If we push down the crouch key and we are crouching (not wall running) we decrease model size
         if (Input.GetKeyDown(crouchKey))
         {
+            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Crouch);
             transform.localScale = new Vector3(localScale.x, crouchYScale, localScale.z);
             _isCrouching = true;
         }
@@ -186,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
         // When releasing crouch key sets our scale back to normal
         if (Input.GetKeyUp(crouchKey) && !IsUnderObject())
         {
+            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Idle);
             transform.localScale = new Vector3(localScale.x, _startYScale, localScale.z);
             _isCrouching = false;
         }
@@ -195,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_isCrouching && !Input.GetKey(crouchKey) && !IsUnderObject())
         {
+            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Idle);
             Vector3 localScale = transform.localScale;
             transform.localScale = new Vector3(localScale.x, _startYScale, localScale.z);
             _isCrouching = false;
