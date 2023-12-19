@@ -440,6 +440,14 @@ PrefabInstance:
       propertyPath: crouchYScale
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6750911387848892309, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
+      propertyPath: animationManager
+      value: 
+      objectReference: {fileID: 1630440804}
+    - target: {fileID: 8992265002036349583, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1013,6 +1021,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7520830540043566830, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
   m_PrefabInstance: {fileID: 820621354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1630440801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6750911387848892309, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
+  m_PrefabInstance: {fileID: 820621354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761992329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681728be7f1076c4887fb6e9db05b6b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1630440804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +1045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1630440800}
+  playerMovement: {fileID: 1630440801}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
