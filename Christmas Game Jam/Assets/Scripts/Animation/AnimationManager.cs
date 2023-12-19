@@ -14,4 +14,10 @@ public class AnimationManager : MonoBehaviour
         WalkLeft,
         Crouch,
     }
+
+    private Dictionary<AnimationManager.AnimationType, string> _animations = new()
+    {
+        { AnimationType.WalkForward, "Walk"},
+        { AnimationType.WalkBackward, "Walk"}
+    };
 }
