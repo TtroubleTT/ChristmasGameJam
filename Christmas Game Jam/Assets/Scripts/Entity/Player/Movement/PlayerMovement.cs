@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private CharacterController controller;
+    [SerializeField] private Animator animator;
 
     [Header("Speed")]
     [SerializeField] private float walkSpeed = 12f;
@@ -48,16 +49,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Walking,
         Sprinting,
-        Dashing,
-        WallRunning,
         Crouching,
         Air,
         Falling,
     }
-    
-    // Code has been inspired and modified a bit based on these tutorials
-    // https://www.youtube.com/watch?v=f473C43s8nE&t=505s
-    // https://www.youtube.com/watch?v=_QajrabyTJc
 
     public bool IsGrounded()
     {
@@ -182,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 localScale = transform.localScale;
         
         // If we push down the crouch key and we are crouching (not wall running) we decrease model size
-        if (Input.GetKeyDown(crouchKey) && movementState != MovementState.WallRunning)
+        if (Input.GetKeyDown(crouchKey))
         {
             transform.localScale = new Vector3(localScale.x, crouchYScale, localScale.z);
             _isCrouching = true;
