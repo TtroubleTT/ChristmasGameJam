@@ -52,6 +52,9 @@ public class PlayerMovement : MonoBehaviour
         WalkingRight,
         WalkingLeft,
         Sprinting,
+        SprintingBackwards,
+        SprintingRight,
+        SprintingLeft,
         Crouching,
         CrouchWalkForward,
         CrouchWalkBackWard,
@@ -119,7 +122,23 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (_isGrounded && Input.GetKey(sprintKey))
         {
-            movementState = MovementState.Sprinting;
+            if (_movementY < 0)
+            {
+                movementState = MovementState.SprintingBackwards;
+            }
+            else if (_movementX > .3f)
+            {
+                movementState = MovementState.SprintingRight;
+            }
+            else if (_movementX < -.3f)
+            {
+                movementState = MovementState.SprintingLeft;
+            }
+            else
+            {
+                movementState = MovementState.Sprinting;
+            }
+            
             _currentSpeed = sprintSpeed;
         }
         else if (_isGrounded)
