@@ -33,14 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     [SerializeField] private float jumpHeight = 3f;
-    private bool _canDoubleJump = false;
 
     [Header("Crouching")]
     [SerializeField] private float crouchYScale;
     private float _startYScale;
     private bool _isCrouching = false;
-    private double _fallTime = 0.0;
-    private bool _jumped = false;
 
     // Movement States
     [HideInInspector] public MovementState movementState;
@@ -149,13 +146,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (_fallTime < 0.35 && !_jumped)
-            {
-                movementState = MovementState.Falling;
-                _fallTime += Time.deltaTime;
-            }
-            else
-                movementState = MovementState.Air;
+            movementState = MovementState.Air;
         }
     }
 
@@ -167,9 +158,6 @@ public class PlayerMovement : MonoBehaviour
         // Makes it so we arent changing velocity when on ground not falling
         if (_isGrounded && velocity.y < 0)
         {
-            _jumped = false;
-            _fallTime = 0.0;
-            _canDoubleJump = true;
             velocity.y = -2f;
         }
     }
@@ -187,19 +175,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckJump()
     {
-        if (Input.GetKeyDown(jumpKey))
+        if (Input.GetKeyDown(jumpKey) && _isGrounded)
         {
-            switch (_isGrounded || movementState == MovementState.Falling)
-            {
-                case true when movementState != MovementState.Crouching || movementState != MovementState.CrouchWalkForward || movementState != MovementState.CrouchWalkBackWard:
-                    _jumped = true;
-                    DoJump();
-                    break;
-                case false when movementState is MovementState.Air or MovementState.Falling && _canDoubleJump:
-                    _canDoubleJump = false;
-                    DoJump();
-                    break;
-            }
+            DoJump();
         }
     }
 
