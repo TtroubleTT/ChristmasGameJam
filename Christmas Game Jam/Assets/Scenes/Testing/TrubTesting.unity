@@ -427,14 +427,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8226139917905354236, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1270153047}
-    - target: {fileID: 8226139917905354236, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
-      propertyPath: enemyLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -497,11 +489,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 437fa2517fb3fb74e9c43f543937a08d, type: 3}
---- !u!4 &1270153047 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8992265002036349583, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
-  m_PrefabInstance: {fileID: 820621354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1430342680
 PrefabInstance:
   m_ObjectHideFlags: 0

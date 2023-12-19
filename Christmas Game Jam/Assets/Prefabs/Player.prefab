@@ -267,11 +267,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac267134563db4d449dad21896f0701f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 500
-  bonkUpRotatePoint: {fileID: 4778161754692107725}
-  bonkDownRotatePoint: {fileID: 455790435241338414}
-  attackKey: 323
   bonkAnimator: {fileID: 7970995210748263572}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  cam: {fileID: 8992265002036349583}
+  damage: 100
+  attackDistance: 6
+  attackWidth: 2.5
+  attackKey: 323
+  cooldown: 1
 --- !u!95 &7970995210748263572
 Animator:
   serializedVersion: 5
