@@ -12,7 +12,6 @@ public class ShootingEnemy : EnemyBase
     [Header("Enemy Stats")]
     [SerializeField] private float maxHealth = 50f;
     [SerializeField] private float currentHealth = 50f;
-    [SerializeField] private float soulAmount = 20f;
     [SerializeField] private float shotRange = 30f;
     [SerializeField] private float shotCooldown = 3f;
     private float _lastShotTime;
@@ -42,9 +41,6 @@ public class ShootingEnemy : EnemyBase
     public override bool SubtractHealth(float amount)
     {
         bool stillAlive = base.SubtractHealth(amount);
-        
-        if (stillAlive)
-            _animator.Play("GetHit");
 
         return stillAlive;
     }
@@ -117,7 +113,6 @@ public class ShootingEnemy : EnemyBase
 
     private void Shoot()
     {
-        _animator.Play("Attack01");
         Transform myTransform = wandTransform;
         GameObject projectile = Instantiate(projectilePrefab, myTransform.position + (myTransform.forward * 2) + myTransform.up, myTransform.rotation);
         Vector3 direction = (_player.transform.position - transform.position).normalized; // Gets direction of player
