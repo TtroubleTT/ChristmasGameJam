@@ -427,18 +427,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8226139917905354236, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
-      propertyPath: cooldown
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8226139917905354236, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
-      propertyPath: attackWidth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8226139917905354236, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
-      propertyPath: attackDistance
-      value: 3.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
