@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1963145974142163094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.563, z: 0.332}
+  m_LocalPosition: {x: 0, y: 1.563, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122,11 +122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.18
+      value: -0.475
       objectReference: {fileID: 0}
     - target: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -177,6 +177,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8904481353477386477, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6750911387848892309}
+    - targetCorrespondingSourceObject: {fileID: 8904481353477386477, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8591212894342037959}
   m_SourcePrefab: {fileID: 100100000, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
 --- !u!1 &3887917093814353454 stripped
 GameObject:
@@ -222,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 846724269782911544}
+  animationManager: {fileID: 8591212894342037959}
   walkSpeed: 12
   sprintSpeed: 20
   crouchSpeed: 5
@@ -237,8 +241,22 @@ MonoBehaviour:
   useGravity: 1
   velocity: {x: 0, y: 0, z: 0}
   jumpHeight: 4
-  crouchYScale: 0.4
+  crouchYScale: 0.5
   movementState: 0
+--- !u!114 &8591212894342037959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887917093814353454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c0c52e484d4a17b76c82a0b1357a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7520830540043566830}
+  playerMovement: {fileID: 6750911387848892309}
 --- !u!4 &4521463753401263252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
@@ -247,6 +265,11 @@ Transform:
 --- !u!4 &6363080863414850990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1596949614207916909, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+  m_PrefabInstance: {fileID: 5649683696578645699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7520830540043566830 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2754213839197597741, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
   m_PrefabInstance: {fileID: 5649683696578645699}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7816995541118317609 stripped
