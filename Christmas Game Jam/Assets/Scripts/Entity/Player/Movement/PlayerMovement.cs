@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private CharacterController controller;
-    [SerializeField] private Animator animator;
+    [SerializeField] private AnimationManager animationManager;
 
     [Header("Speed")]
     [SerializeField] private float walkSpeed = 12f;
@@ -33,25 +33,32 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     [SerializeField] private float jumpHeight = 3f;
-    private bool _canDoubleJump = false;
 
     [Header("Crouching")]
     [SerializeField] private float crouchYScale;
     private float _startYScale;
     private bool _isCrouching = false;
-    private double _fallTime = 0.0;
-    private bool _jumped = false;
 
     // Movement States
     [HideInInspector] public MovementState movementState;
+    private float _movementX = 0f;
+    private float _movementY = 0f;
 
     public enum MovementState
     {
+        Idle,
         Walking,
+        WalkingBackwards,
+        WalkingRight,
+        WalkingLeft,
         Sprinting,
+        SprintingBackwards,
+        SprintingRight,
+        SprintingLeft,
         Crouching,
+        CrouchWalkForward,
+        CrouchWalkBackWard,
         Air,
-        Falling,
     }
 
     public bool IsGrounded()
@@ -62,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _startYScale = transform.localScale.y;
+        animationManager = GetComponent<AnimationManager>();
     }
 
     private void Update()
@@ -93,28 +101,70 @@ public class PlayerMovement : MonoBehaviour
         // Determines the movement state and speed based on different conditions
         if (_isCrouching)
         {
-            movementState = MovementState.Crouching;
+            if (_movementY > .1f)
+            {
+                movementState = MovementState.CrouchWalkForward;
+            }
+            else if (_movementY < -.1f)
+            {
+                movementState = MovementState.CrouchWalkBackWard;
+            }
+            else
+            {
+                movementState = MovementState.Crouching;
+            }
+
             _currentSpeed = crouchSpeed;
+        }
+        else if (_isGrounded && (_movementY < 0.3f && _movementY > -0.3f) && (_movementX < 0.3f && _movementX > -0.3f))
+        {
+            movementState = MovementState.Idle;
         }
         else if (_isGrounded && Input.GetKey(sprintKey))
         {
-            movementState = MovementState.Sprinting;
+            if (_movementY < 0)
+            {
+                movementState = MovementState.SprintingBackwards;
+            }
+            else if (_movementX > .3f)
+            {
+                movementState = MovementState.SprintingRight;
+            }
+            else if (_movementX < -.3f)
+            {
+                movementState = MovementState.SprintingLeft;
+            }
+            else
+            {
+                movementState = MovementState.Sprinting;
+            }
+            
             _currentSpeed = sprintSpeed;
         }
         else if (_isGrounded)
         {
-            movementState = MovementState.Walking;
+            if (_movementY < 0)
+            {
+                movementState = MovementState.WalkingBackwards;
+            }
+            else if (_movementX > .3f)
+            {
+                movementState = MovementState.WalkingRight;
+            }
+            else if (_movementX < -.3f)
+            {
+                movementState = MovementState.WalkingLeft;
+            }
+            else
+            {
+                movementState = MovementState.Walking;
+            }
+            
             _currentSpeed = walkSpeed;
         }
         else
         {
-            if (_fallTime < 0.35 && !_jumped)
-            {
-                movementState = MovementState.Falling;
-                _fallTime += Time.deltaTime;
-            }
-            else
-                movementState = MovementState.Air;
+            movementState = MovementState.Air;
         }
     }
 
@@ -126,39 +176,27 @@ public class PlayerMovement : MonoBehaviour
         // Makes it so we arent changing velocity when on ground not falling
         if (_isGrounded && velocity.y < 0)
         {
-            _jumped = false;
-            _fallTime = 0.0;
-            _canDoubleJump = true;
             velocity.y = -2f;
         }
     }
 
     private void MoveInDirection()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        
+        _movementX = Input.GetAxis("Horizontal");
+        _movementY = Input.GetAxis("Vertical");
+
         Transform myTransform = transform;
-        Vector3 move = myTransform.right * x + myTransform.forward * z; // This makes it so its moving locally so rotation is taken into consideration
+        Vector3 move = myTransform.right * _movementX + myTransform.forward * _movementY; // This makes it so its moving locally so rotation is taken into consideration
 
         controller.Move(move * (_currentSpeed * Time.deltaTime)); // Moving in the direction of move at the speed
     }
 
     private void CheckJump()
     {
-        if (Input.GetKeyDown(jumpKey))
+        if (Input.GetKeyDown(jumpKey) && _isGrounded)
         {
-            switch (_isGrounded || movementState == MovementState.Falling)
-            {
-                case true when movementState != MovementState.Crouching:
-                    _jumped = true;
-                    DoJump();
-                    break;
-                case false when movementState is MovementState.Air or MovementState.Falling && _canDoubleJump:
-                    _canDoubleJump = false;
-                    DoJump();
-                    break;
-            }
+            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Jump);
+            DoJump();
         }
     }
 
