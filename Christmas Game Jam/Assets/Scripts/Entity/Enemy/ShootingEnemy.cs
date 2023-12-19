@@ -70,10 +70,12 @@ public class ShootingEnemy : EnemyBase
 
     private void Update()
     {
+        /*
         Vector3 playerPos = _playerTransform.position;
         Vector3 lookPoint = new Vector3(playerPos.x, transform.position.y, playerPos.z);
         transform.LookAt(lookPoint);
         CheckShoot();
+        */
     }
 
     // Checks if the distance between player and enemy is within the range they are allowed to fire
