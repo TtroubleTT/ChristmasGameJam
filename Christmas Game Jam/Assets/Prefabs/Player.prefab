@@ -170,121 +170,99 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4521463753401263252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8434063107130929682
-GameObject:
+--- !u!1001 &2447309234449859944
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5073379043236322115}
-  - component: {fileID: 602935832406587722}
-  - component: {fileID: 8395895716872385147}
-  - component: {fileID: 8226139917905354236}
-  - component: {fileID: 7970995210748263572}
-  m_Layer: 0
-  m_Name: BonkStick
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5073379043236322115
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8434063107130929682}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15855674, y: 0.42912045, z: -0.6332322, w: 0.6242855}
-  m_LocalPosition: {x: 0.46, y: 1.201, z: 0.718}
-  m_LocalScale: {x: 1.8, y: 0.1, z: 0.19999999}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4521463753401263252}
-  m_LocalEulerAnglesHint: {x: 47.854, y: 29.948, z: -77.28}
---- !u!33 &602935832406587722
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4521463753401263252}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.585196
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.485
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.233
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.727
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.25496623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.748028
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.31299913
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5267618
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.963
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 108.388
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -132.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      propertyPath: m_Name
+      value: BonkStick
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 11097300149357682}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2750382992413467728}
+  m_SourcePrefab: {fileID: 100100000, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+--- !u!4 &2773143925934236291 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+  m_PrefabInstance: {fileID: 2447309234449859944}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8434063107130929682}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8395895716872385147
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &3258353340998219833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 63c847ad6011e684697ea049dfbb940d, type: 3}
+  m_PrefabInstance: {fileID: 2447309234449859944}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8434063107130929682}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8226139917905354236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8434063107130929682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac267134563db4d449dad21896f0701f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bonkAnimator: {fileID: 7970995210748263572}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  cam: {fileID: 8992265002036349583}
-  damage: 100
-  attackDistance: 3.5
-  attackWidth: 1
-  attackKey: 323
-  cooldown: 0.7
---- !u!95 &7970995210748263572
+--- !u!95 &11097300149357682
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8434063107130929682}
+  m_GameObject: {fileID: 3258353340998219833}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 57dd91acb587c414c89487ad9a97261c, type: 2}
@@ -298,6 +276,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2750382992413467728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258353340998219833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac267134563db4d449dad21896f0701f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonkAnimator: {fileID: 11097300149357682}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  cam: {fileID: 8992265002036349583}
+  damage: 100
+  attackDistance: 3.5
+  attackWidth: 1
+  attackKey: 323
+  cooldown: 0.7
 --- !u!1001 &5649683696578645699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10791,13 +10791,13 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5073379043236322115}
-    - targetCorrespondingSourceObject: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4778161754692107725}
     - targetCorrespondingSourceObject: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 455790435241338414}
+    - targetCorrespondingSourceObject: {fileID: 8131462640605833815, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2773143925934236291}
     - targetCorrespondingSourceObject: {fileID: 2457902601598515946, guid: 798c05ee1e2530b4ebb1d9d7e5a2c6a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8992265002036349583}
