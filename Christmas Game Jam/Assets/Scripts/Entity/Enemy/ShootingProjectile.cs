@@ -44,7 +44,6 @@ public class ShootingProjectile : MonoBehaviour
         if (Time.time - _lastHit <= .5)
             return;
         
-        /*
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerBase>().SubtractHealth(_damage);
@@ -54,7 +53,6 @@ public class ShootingProjectile : MonoBehaviour
         {
             other.gameObject.GetComponent<EnemyBase>().SubtractHealth(_damage);
         }
-        */
         
         _lastHit = Time.time;
         Destroy(gameObject);
