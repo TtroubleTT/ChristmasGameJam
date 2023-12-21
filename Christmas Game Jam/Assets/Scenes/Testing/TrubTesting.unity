@@ -221,13 +221,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22da2fd1cf2104b4fb6934210df59936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  currentHealth: 50
-  shotRange: 30
-  shotCooldown: 3
+  maxHealth: 100
+  currentHealth: 100
+  shotRange: 120
+  shotCooldown: 1
   damage: 10
   speed: 50
-  range: 70
+  range: 130
   projectilePrefab: {fileID: 8702900830103643964, guid: c4a259e6d00ed1044b8a5472b1b25367, type: 3}
   shootTransformation: {fileID: 374679605}
 --- !u!1 &384872079
