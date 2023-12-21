@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f77ee38-80c1-4677-96c3-e464c8518100" name="Changes" comment="" />
+    <list default="true" id="7f77ee38-80c1-4677-96c3-e464c8518100" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingProjectile.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +90,7 @@
       <updated>1702940491919</updated>
       <workItem from="1702940492404" duration="2573000" />
       <workItem from="1702945402775" duration="22465000" />
+      <workItem from="1703149889517" duration="327000" />
     </task>
     <servers />
   </component>
