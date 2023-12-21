@@ -26,8 +26,7 @@ public class ShootingEnemy : EnemyBase
     [SerializeField] private Transform shootTransformation;
     private GameObject _player;
     private Transform _playerTransform;
-    private Animator _animator;
-    
+
     // Projectile Stats
     public enum Stats
     {
@@ -64,7 +63,6 @@ public class ShootingEnemy : EnemyBase
         InitializeAbstractedStats();
         
         _player = GameObject.FindGameObjectWithTag("Player");
-        _animator = GetComponent<Animator>();
         _playerTransform = _player.transform;
     }
 
