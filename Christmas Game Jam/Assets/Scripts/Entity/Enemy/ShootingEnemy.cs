@@ -107,7 +107,7 @@ public class ShootingEnemy : EnemyBase
     private void Shoot()
     {
         Transform myTransform = shootTransformation;
-        GameObject projectile = Instantiate(projectilePrefab, myTransform.position + (myTransform.forward * 2) + myTransform.up, myTransform.rotation);
+        GameObject projectile = Instantiate(projectilePrefab, myTransform.position + myTransform.forward + myTransform.up, myTransform.rotation);
         Vector3 direction = (Player.transform.position - transform.position).normalized; // Gets direction of player
         projectile.GetComponent<ShootingProjectile>().ProjectileInitialize(_projectileStats, direction);
     }

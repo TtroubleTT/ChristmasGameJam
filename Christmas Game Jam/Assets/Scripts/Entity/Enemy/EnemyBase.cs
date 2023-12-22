@@ -37,6 +37,11 @@ public abstract class EnemyBase : EntityBase
     // Moves enemy towards player at its speed
     protected virtual void MoveTowardsPlayer()
     {
+        float distance = Vector3.Distance(Player.transform.position, transform.position);
+
+        if (distance <= DistanceToKeepFromPlayer)
+            return;
+        
         Vector3 pos = transform.position;
         Vector3 direction = (Player.transform.position - pos).normalized; // Gets direction of player
         direction = new Vector3(direction.x, 0, direction.z);
