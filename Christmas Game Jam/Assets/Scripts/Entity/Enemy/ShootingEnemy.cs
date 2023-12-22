@@ -23,11 +23,10 @@ public class ShootingEnemy : EnemyBase
     
     [Header("References")] 
     [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private Transform wandTransform;
+    [SerializeField] private Transform shootTransformation;
     private GameObject _player;
     private Transform _playerTransform;
-    private Animator _animator;
-    
+
     // Projectile Stats
     public enum Stats
     {
@@ -64,18 +63,15 @@ public class ShootingEnemy : EnemyBase
         InitializeAbstractedStats();
         
         _player = GameObject.FindGameObjectWithTag("Player");
-        _animator = GetComponent<Animator>();
         _playerTransform = _player.transform;
     }
 
     private void Update()
     {
-        /*
         Vector3 playerPos = _playerTransform.position;
         Vector3 lookPoint = new Vector3(playerPos.x, transform.position.y, playerPos.z);
         transform.LookAt(lookPoint);
         CheckShoot();
-        */
     }
 
     // Checks if the distance between player and enemy is within the range they are allowed to fire
@@ -115,7 +111,7 @@ public class ShootingEnemy : EnemyBase
 
     private void Shoot()
     {
-        Transform myTransform = wandTransform;
+        Transform myTransform = shootTransformation;
         GameObject projectile = Instantiate(projectilePrefab, myTransform.position + (myTransform.forward * 2) + myTransform.up, myTransform.rotation);
         Vector3 direction = (_player.transform.position - transform.position).normalized; // Gets direction of player
         projectile.GetComponent<ShootingProjectile>().ProjectileInitialize(_projectileStats, direction);
