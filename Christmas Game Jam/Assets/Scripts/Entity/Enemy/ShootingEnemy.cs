@@ -24,6 +24,7 @@ public class ShootingEnemy : EnemyBase
     [Header("References")] 
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootTransformation;
+    [SerializeField] private CharacterController controller;
     private GameObject _player;
     private Transform _playerTransform;
 
@@ -37,13 +38,6 @@ public class ShootingEnemy : EnemyBase
     
     private readonly Dictionary<Stats, float> _projectileStats = new();
 
-    public override bool SubtractHealth(float amount)
-    {
-        bool stillAlive = base.SubtractHealth(amount);
-
-        return stillAlive;
-    }
-    
     protected override void InitializeAbstractedStats()
     {
         MaxHealth = maxHealth;
@@ -68,10 +62,25 @@ public class ShootingEnemy : EnemyBase
 
     private void Update()
     {
+        LookAtPlayer();
+        MoveTowardsPlayer();
+        CheckShoot();
+    }
+    
+    // Enemy's look towards players
+    private void LookAtPlayer()
+    {
         Vector3 playerPos = _playerTransform.position;
         Vector3 lookPoint = new Vector3(playerPos.x, transform.position.y, playerPos.z);
         transform.LookAt(lookPoint);
-        CheckShoot();
+    }
+
+    private void MoveTowardsPlayer()
+    {
+        Vector3 pos = transform.position;
+        Vector3 direction = (_player.transform.position - pos).normalized; // Gets direction of player
+        direction = new Vector3(direction.x, 0, direction.z);
+        controller.Move(direction * (15 * Time.deltaTime)); // Moving in the direction of move at the speed
     }
 
     // Checks if the distance between player and enemy is within the range they are allowed to fire
