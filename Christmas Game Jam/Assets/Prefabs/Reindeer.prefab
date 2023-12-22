@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6473323809599390044, guid: 9ea59d4af0ba3453db9381fe65c198eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 6473323809599390044, guid: 9ea59d4af0ba3453db9381fe65c198eb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -291,3 +291,4 @@ MonoBehaviour:
   attackRange: 5
   attackCooldown: 3
   damage: 20
+  controller: {fileID: 1299976366972594213}

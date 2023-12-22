@@ -13,6 +13,8 @@ public class ShootingEnemy : EnemyBase
 
     protected override float MovementSpeed { get; set; }
 
+    protected override CharacterController CharacterController { get; set; }
+
     [Header("Enemy Stats")]
     [SerializeField] private float maxHealth = 50f;
     [SerializeField] private float currentHealth = 50f;
@@ -30,6 +32,7 @@ public class ShootingEnemy : EnemyBase
     [Header("References")] 
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootTransformation;
+    [SerializeField] private CharacterController controller;
 
     // Projectile Stats
     public enum Stats
@@ -47,6 +50,7 @@ public class ShootingEnemy : EnemyBase
         CurrentHealth = currentHealth;
         DistanceToKeepFromPlayer = distanceToKeepFromPlayer;
         MovementSpeed = movementSpeed;
+        CharacterController = controller;
     }
 
     private void InitializeStats()

@@ -12,6 +12,8 @@ public class MeleeEnemy : EnemyBase
 
     protected override float MovementSpeed { get; set; }
 
+    protected override CharacterController CharacterController { get; set; }
+
     [Header("Enemy Stats")]
     [SerializeField] private float maxHealth = 50f;
     [SerializeField] private float currentHealth = 50f;
@@ -22,12 +24,16 @@ public class MeleeEnemy : EnemyBase
     [SerializeField] private float damage = 20f;
     private float _lastAttackTime;
 
+    [Header("References")] 
+    [SerializeField] private CharacterController controller;
+
     protected override void InitializeAbstractedStats()
     {
         MaxHealth = maxHealth;
         CurrentHealth = currentHealth;
         DistanceToKeepFromPlayer = distanceToKeepFromPlayer;
         MovementSpeed = movementSpeed;
+        CharacterController = controller;
     }
     
     private void Start()
