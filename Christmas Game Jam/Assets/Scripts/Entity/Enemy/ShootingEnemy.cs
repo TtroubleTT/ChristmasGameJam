@@ -9,9 +9,15 @@ public class ShootingEnemy : EnemyBase
     
     protected override float CurrentHealth { get; set; }
 
+    protected override float DistanceToKeepFromPlayer { get; set; }
+
+    protected override float MovementSpeed { get; set; }
+
     [Header("Enemy Stats")]
     [SerializeField] private float maxHealth = 50f;
     [SerializeField] private float currentHealth = 50f;
+    [SerializeField] private float distanceToKeepFromPlayer = 20f;
+    [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float shotRange = 30f;
     [SerializeField] private float shotCooldown = 3f;
     private float _lastShotTime;
@@ -24,9 +30,6 @@ public class ShootingEnemy : EnemyBase
     [Header("References")] 
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootTransformation;
-    [SerializeField] private CharacterController controller;
-    private GameObject _player;
-    private Transform _playerTransform;
 
     // Projectile Stats
     public enum Stats
@@ -42,6 +45,8 @@ public class ShootingEnemy : EnemyBase
     {
         MaxHealth = maxHealth;
         CurrentHealth = currentHealth;
+        DistanceToKeepFromPlayer = distanceToKeepFromPlayer;
+        MovementSpeed = movementSpeed;
     }
 
     private void InitializeStats()
@@ -55,9 +60,6 @@ public class ShootingEnemy : EnemyBase
     {
         InitializeStats();
         InitializeAbstractedStats();
-        
-        _player = GameObject.FindGameObjectWithTag("Player");
-        _playerTransform = _player.transform;
     }
 
     private void Update()
@@ -66,27 +68,11 @@ public class ShootingEnemy : EnemyBase
         MoveTowardsPlayer();
         CheckShoot();
     }
-    
-    // Enemy's look towards players
-    private void LookAtPlayer()
-    {
-        Vector3 playerPos = _playerTransform.position;
-        Vector3 lookPoint = new Vector3(playerPos.x, transform.position.y, playerPos.z);
-        transform.LookAt(lookPoint);
-    }
-
-    private void MoveTowardsPlayer()
-    {
-        Vector3 pos = transform.position;
-        Vector3 direction = (_player.transform.position - pos).normalized; // Gets direction of player
-        direction = new Vector3(direction.x, 0, direction.z);
-        controller.Move(direction * (15 * Time.deltaTime)); // Moving in the direction of move at the speed
-    }
 
     // Checks if the distance between player and enemy is within the range they are allowed to fire
     private bool IsInRange()
     {
-        float distance = Vector3.Distance(_player.transform.position, transform.position);
+        float distance = Vector3.Distance(Player.transform.position, transform.position);
 
         if (distance <= shotRange)
             return true;
@@ -97,9 +83,9 @@ public class ShootingEnemy : EnemyBase
     // Checks if the player is within the enemies line of sight
     private bool InLineOfSight()
     {
-        if (Physics.Raycast(transform.position + transform.up, (_player.transform.position - transform.position), out RaycastHit hitInfo, shotRange))
+        if (Physics.Raycast(transform.position + transform.up, (Player.transform.position - transform.position), out RaycastHit hitInfo, shotRange))
         {
-            if (hitInfo.transform.gameObject == _player)
+            if (hitInfo.transform.gameObject == Player)
             {
                 return true;
             }
@@ -122,7 +108,7 @@ public class ShootingEnemy : EnemyBase
     {
         Transform myTransform = shootTransformation;
         GameObject projectile = Instantiate(projectilePrefab, myTransform.position + (myTransform.forward * 2) + myTransform.up, myTransform.rotation);
-        Vector3 direction = (_player.transform.position - transform.position).normalized; // Gets direction of player
+        Vector3 direction = (Player.transform.position - transform.position).normalized; // Gets direction of player
         projectile.GetComponent<ShootingProjectile>().ProjectileInitialize(_projectileStats, direction);
     }
 }

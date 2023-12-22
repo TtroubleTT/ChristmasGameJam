@@ -236,7 +236,7 @@ MonoBehaviour:
     m_Bits: 64
   cam: {fileID: 8992265002036349583}
   damage: 100
-  attackDistance: 4
+  attackDistance: 4.5
   attackWidth: 1
   attackKey: 323
   cooldown: 0.7
