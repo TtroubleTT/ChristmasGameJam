@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &263864933
+--- !u!1001 &304319282
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.1
+      value: -24.8
       objectReference: {fileID: 0}
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.78
+      value: 3.4470873
       objectReference: {fileID: 0}
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807533142663801480, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_Name
-      value: Reindeer (2)
+      value: Reindeer (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -504,7 +504,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
---- !u!1001 &947666011
+--- !u!1001 &955740162
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -514,7 +514,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.8
+      value: 8.066715
       objectReference: {fileID: 0}
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -522,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.4470873
+      value: -21.02
       objectReference: {fileID: 0}
     - target: {fileID: 324232444902150420, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -554,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8807533142663801480, guid: eb7ca7bc89da54240ae1c09a4166d6af, type: 3}
       propertyPath: m_Name
-      value: Reindeer (1)
+      value: Reindeer (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -841,5 +841,5 @@ SceneRoots:
   - {fileID: 420617135}
   - {fileID: 2322087821846646698}
   - {fileID: 9038338324360865308}
-  - {fileID: 947666011}
-  - {fileID: 263864933}
+  - {fileID: 304319282}
+  - {fileID: 955740162}

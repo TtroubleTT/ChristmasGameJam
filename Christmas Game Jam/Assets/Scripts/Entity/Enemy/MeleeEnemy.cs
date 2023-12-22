@@ -19,13 +19,14 @@ public class MeleeEnemy : EnemyBase
     [SerializeField] private float currentHealth = 50f;
     [SerializeField] private float distanceToKeepFromPlayer = 5f;
     [SerializeField] private float movementSpeed = 20f;
-    [SerializeField] private float attackRange = 5f;
+    [SerializeField] private float attackRange = 6f;
     [SerializeField] private float attackCooldown = 3f;
     [SerializeField] private float damage = 20f;
     private float _lastAttackTime;
 
     [Header("References")] 
     [SerializeField] private CharacterController controller;
+    private PlayerBase _playerBase;
 
     protected override void InitializeAbstractedStats()
     {
@@ -39,11 +40,42 @@ public class MeleeEnemy : EnemyBase
     private void Start()
     {
         InitializeAbstractedStats();
+        _playerBase = Player.GetComponent<PlayerBase>();
     }
     
     private void Update()
     {
         LookAtPlayer();
         MoveTowardsPlayer();
+        CheckAttack();
+    }
+
+    private bool IsInRange()
+    {
+        float distance = Vector3.Distance(Player.transform.position, transform.position);
+
+        if (distance > attackRange)
+            return false;
+
+        return true;
+    }
+
+    private void CheckAttack()
+    {
+        float distance = Vector3.Distance(Player.transform.position, transform.position);
+
+        if (distance >= attackRange)
+            return;
+        
+        if (Time.time - _lastAttackTime > attackCooldown && IsInRange())
+        {
+            _lastAttackTime = Time.time;
+            Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        _playerBase.SubtractHealth(damage);
     }
 }

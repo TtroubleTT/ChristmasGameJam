@@ -191,7 +191,7 @@ PrefabInstance:
       addedObject: {fileID: 1299976366972594213}
     - targetCorrespondingSourceObject: {fileID: 2850953109041593024, guid: 9ea59d4af0ba3453db9381fe65c198eb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 546999964591374047}
+      addedObject: {fileID: 175535266248031660}
   m_SourcePrefab: {fileID: 100100000, guid: 9ea59d4af0ba3453db9381fe65c198eb, type: 3}
 --- !u!1 &8807533142663801480 stripped
 GameObject:
@@ -272,7 +272,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &546999964591374047
+--- !u!114 &175535266248031660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -288,7 +288,7 @@ MonoBehaviour:
   currentHealth: 50
   distanceToKeepFromPlayer: 5
   movementSpeed: 20
-  attackRange: 5
+  attackRange: 6
   attackCooldown: 3
   damage: 20
   controller: {fileID: 1299976366972594213}
