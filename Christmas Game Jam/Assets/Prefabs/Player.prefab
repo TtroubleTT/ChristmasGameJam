@@ -10980,7 +10980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTrans: {fileID: 8992265002036349583}
-  projectilePrefab: {fileID: 8702900830103643964, guid: c4a259e6d00ed1044b8a5472b1b25367, type: 3}
+  projectilePrefab: {fileID: 8702900830103643964, guid: 2f308dc45c43ee94bb5b9000b17acec6, type: 3}
   attackKey: 323
   attackCooldown: 0.5
   damage: 40
