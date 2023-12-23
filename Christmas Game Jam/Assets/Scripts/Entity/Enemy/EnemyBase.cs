@@ -14,6 +14,8 @@ public abstract class EnemyBase : EntityBase
 
     protected GameObject Player;
     private Transform _playerTransform;
+    private float _gravity = - 39.24f;
+    private Vector3 _velocity;
 
     private void Awake()
     {
@@ -46,5 +48,12 @@ public abstract class EnemyBase : EntityBase
         Vector3 direction = (Player.transform.position - pos).normalized; // Gets direction of player
         direction = new Vector3(direction.x, 0, direction.z);
         CharacterController.Move(direction * (MovementSpeed * Time.deltaTime)); // Moving in the direction of move at the speed
+    }
+    
+    // Gravity for enemies
+    protected virtual void Gravity()
+    {
+        _velocity.y += _gravity * Time.deltaTime;
+        CharacterController.Move(_velocity * Time.deltaTime);
     }
 }
