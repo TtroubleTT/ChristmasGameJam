@@ -86,8 +86,6 @@ public class SaintClau : EnemyBase
 
     private void Attack()
     {
-        Debug.Log("should wave");
-        animationManager.PlaySantaAnimation(AnimationManager.SantaAnimationType.DementedWave);
         _playerBase.SubtractHealth(meleeDamage);
     }
 }
