@@ -60,7 +60,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bip001|SLAP
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -380,7 +380,7 @@ AnimatorStateMachine:
     m_Position: {x: 970, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2860575728837737104}
-    m_Position: {x: 970, y: 150, z: 0}
+    m_Position: {x: 970, y: 140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5452621142665624747}
     m_Position: {x: 970, y: 90, z: 0}
@@ -392,7 +392,7 @@ AnimatorStateMachine:
     m_Position: {x: 1180, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2195131700381956977}
-    m_Position: {x: 760, y: 150, z: 0}
+    m_Position: {x: 760, y: 140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6056812253171879538}
     m_Position: {x: 760, y: 200, z: 0}

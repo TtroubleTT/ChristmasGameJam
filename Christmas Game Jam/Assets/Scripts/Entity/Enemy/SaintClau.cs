@@ -33,6 +33,8 @@ public class SaintClau : EnemyBase
 
     [Header("References")] 
     [SerializeField] private CharacterController controller;
+    [SerializeField] private AnimationManager animationManager;
+    [SerializeField] private Animator animator;
     private PlayerBase _playerBase;
 
     protected override void InitializeAbstractedStats()
@@ -84,6 +86,7 @@ public class SaintClau : EnemyBase
 
     private void Attack()
     {
+        animator.Play("Bip001|SLAP");
         _playerBase.SubtractHealth(meleeDamage);
     }
 }

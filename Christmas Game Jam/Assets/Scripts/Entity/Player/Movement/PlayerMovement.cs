@@ -69,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _startYScale = transform.localScale.y;
-        animationManager = GetComponent<AnimationManager>();
     }
 
     private void Update()
@@ -195,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(jumpKey) && _isGrounded)
         {
-            animationManager.PlayPlayerAnimation(AnimationManager.AnimationType.Jump);
+            animationManager.PlayPlayerAnimation(AnimationManager.PlayerAnimationType.Jump);
             DoJump();
         }
     }
