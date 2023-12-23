@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f77ee38-80c1-4677-96c3-e464c8518100" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingEnemy.cs" afterDir="false" />
-    </list>
+    <list default="true" id="7f77ee38-80c1-4677-96c3-e464c8518100" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/MeleeEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entity/Player/Combat/BonkStick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../MagicSquad/Magic Squad/Assets/Scripts/Entity/EntityBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -92,6 +90,7 @@
       <workItem from="1702945402775" duration="22465000" />
       <workItem from="1703149889517" duration="946000" />
       <workItem from="1703197089831" duration="3394000" />
+      <workItem from="1703221114576" duration="13439000" />
     </task>
     <servers />
   </component>
