@@ -554,21 +554,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fea29cf226e2484bb72f5891ab2710c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  currentHealth: 200
-  distanceToKeepFromPlayer: 5
-  movementSpeed: 10
+  maxFirstFormHealth: 500
+  maxSecondFormHealth: 500
+  currentHealth: 500
+  distanceToKeepFromPlayerFirstForm: 20
+  distanceToKeepFromPlayerSecondForm: 5
+  movementSpeedFirstForm: 10
+  movementSpeedSecondForm: 15
   attackRange: 6
-  attackCooldown: 5
+  attackCooldown: 1.5
   meleeDamage: 20
   shotRange: 120
-  shotCooldown: 3
+  shotCooldown: 0.5
   damage: 10
   speed: 50
-  range: 70
+  range: 130
   controller: {fileID: 6848450154425019030}
   animationManager: {fileID: 6375468703754832578}
-  animator: {fileID: 6898568361781411187}
+  shootTransformation: {fileID: 3329501807002243484}
+  projectilePrefab: {fileID: 8702900830103643964, guid: 2f308dc45c43ee94bb5b9000b17acec6, type: 3}
 --- !u!143 &6848450154425019030
 CharacterController:
   m_ObjectHideFlags: 0
@@ -636,3 +640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6898568361781411187}
   isPlayer: 0
+--- !u!4 &3329501807002243484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98cbfc70871d1bc478c07764fd8c462b, type: 3}
+  m_PrefabInstance: {fileID: 3007979305228482167}
+  m_PrefabAsset: {fileID: 0}

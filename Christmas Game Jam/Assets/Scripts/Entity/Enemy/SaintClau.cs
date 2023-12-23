@@ -15,22 +15,26 @@ public class SaintClau : EnemyBase
     protected override CharacterController CharacterController { get; set; }
     
     [Header("Enemy Stats")]
-    [SerializeField] private float maxHealth = 200f;
-    [SerializeField] private float currentHealth = 200f;
-    [SerializeField] private float distanceToKeepFromPlayer = 5f;
-    [SerializeField] private float movementSpeed = 10f;
+    [SerializeField] private float maxFirstFormHealth = 500f;
+    [SerializeField] private float maxSecondFormHealth = 500f;
+    [SerializeField] private float currentHealth = 500f;
+    [SerializeField] private float distanceToKeepFromPlayerFirstForm = 20f;
+    [SerializeField] private float distanceToKeepFromPlayerSecondForm = 5f;
+    [SerializeField] private float movementSpeedFirstForm = 10f;
+    [SerializeField] private float movementSpeedSecondForm = 15f;
     [SerializeField] private float attackRange = 6f;
-    [SerializeField] private float attackCooldown = 3f;
+    [SerializeField] private float attackCooldown = 1.5f;
     [SerializeField] private float meleeDamage = 20f;
     [SerializeField] private float shotRange = 120f;
-    [SerializeField] private float shotCooldown = 3f;
+    [SerializeField] private float shotCooldown = 0.5f;
     private float _lastAttackTime;
     private float _lastShotTime;
+    private bool _isInSecondForm;
     
     [Header("Projectile Stats")] 
     [SerializeField] private float damage = 10f;
     [SerializeField] private float speed = 50f;
-    [SerializeField] private float range = 70f;
+    [SerializeField] private float range = 130f;
 
     [Header("References")] 
     [SerializeField] private CharacterController controller;
@@ -43,11 +47,26 @@ public class SaintClau : EnemyBase
     
     protected override void InitializeAbstractedStats()
     {
-        MaxHealth = maxHealth;
+        MaxHealth = maxFirstFormHealth;
         CurrentHealth = currentHealth;
-        DistanceToKeepFromPlayer = distanceToKeepFromPlayer;
-        MovementSpeed = movementSpeed;
+        DistanceToKeepFromPlayer = distanceToKeepFromPlayerFirstForm;
+        MovementSpeed = movementSpeedFirstForm;
         CharacterController = controller;
+    }
+    
+    protected override void Die()
+    {
+        if (_isInSecondForm)
+            Destroy(gameObject);
+        else
+        {
+            _isInSecondForm = true;
+            MaxHealth = maxSecondFormHealth;
+            CurrentHealth = maxSecondFormHealth;
+            DistanceToKeepFromPlayer = distanceToKeepFromPlayerSecondForm;
+            MovementSpeed = movementSpeedSecondForm;
+            animationManager.PlaySantaAnimation(AnimationManager.SantaAnimationType.Morphing);
+        }
     }
     
     private void InitializeStats()
@@ -70,7 +89,11 @@ public class SaintClau : EnemyBase
         Gravity();
         LookAtPlayer();
         MoveTowardsPlayer();
-        CheckShoot();
+        
+        if (!_isInSecondForm)
+            CheckShoot();
+        else
+            CheckAttack();
     }
 
     private bool IsInMeleeRange()
