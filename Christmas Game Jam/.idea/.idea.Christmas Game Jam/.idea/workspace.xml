@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f77ee38-80c1-4677-96c3-e464c8518100" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/SantaController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SantaController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/TrubTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/TrubTesting.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/SaintClau.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/SaintClau.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Player/Movement/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Player/Movement/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +95,7 @@
       <workItem from="1703149889517" duration="946000" />
       <workItem from="1703197089831" duration="3394000" />
       <workItem from="1703221114576" duration="13439000" />
-      <workItem from="1703310502641" duration="8787000" />
+      <workItem from="1703310502641" duration="9616000" />
     </task>
     <servers />
   </component>
