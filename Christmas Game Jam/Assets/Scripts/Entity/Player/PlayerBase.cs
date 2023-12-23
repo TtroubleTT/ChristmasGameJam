@@ -15,7 +15,7 @@ public class PlayerBase : EntityBase
     
     protected override float CurrentHealth { get; set; }
 
-    // private Image _barImage;
+    private Image _barImage;
 
     protected override void Die()
     {
@@ -30,8 +30,8 @@ public class PlayerBase : EntityBase
 
     private void InitializeHealthBar()
     {
-        //_barImage = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
-        //_barImage.fillAmount = CurrentHealth / MaxHealth;
+        _barImage = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
+        _barImage.fillAmount = CurrentHealth / MaxHealth;
     }
 
     private void Awake()
@@ -43,7 +43,7 @@ public class PlayerBase : EntityBase
     public override bool AddHealth(float amount)
     {
         bool addedHealth = base.AddHealth(amount);
-        //_barImage.fillAmount = CurrentHealth / MaxHealth;
+        _barImage.fillAmount = CurrentHealth / MaxHealth;
         return addedHealth;
     }
     
@@ -51,7 +51,7 @@ public class PlayerBase : EntityBase
     public override bool SubtractHealth(float amount)
     {
         bool subtractedHealth = base.SubtractHealth(amount);
-        //_barImage.fillAmount = CurrentHealth / MaxHealth;
+        _barImage.fillAmount = CurrentHealth / MaxHealth;
         return subtractedHealth;
     }
 }
