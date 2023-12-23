@@ -30,6 +30,7 @@ public class SaintClau : EnemyBase
     private float _lastAttackTime;
     private float _lastShotTime;
     private bool _isInSecondForm;
+    private float _transformTime;
     
     [Header("Projectile Stats")] 
     [SerializeField] private float damage = 10f;
@@ -54,6 +55,15 @@ public class SaintClau : EnemyBase
         CharacterController = controller;
     }
     
+    public override bool SubtractHealth(float amount)
+    {
+        if (_isInSecondForm && Time.time - _transformTime < 9f)
+            return false;
+        
+        bool subtractedHealth = base.SubtractHealth(amount);
+        return subtractedHealth;
+    }
+
     protected override void Die()
     {
         if (_isInSecondForm)
@@ -61,6 +71,7 @@ public class SaintClau : EnemyBase
         else
         {
             _isInSecondForm = true;
+            _transformTime = Time.time;
             MaxHealth = maxSecondFormHealth;
             CurrentHealth = maxSecondFormHealth;
             DistanceToKeepFromPlayer = distanceToKeepFromPlayerSecondForm;
@@ -88,7 +99,9 @@ public class SaintClau : EnemyBase
     {
         Gravity();
         LookAtPlayer();
-        MoveTowardsPlayer();
+
+        if (!_isInSecondForm || Time.time - _transformTime > 9f)
+            MoveTowardsPlayer();
         
         if (!_isInSecondForm)
             CheckShoot();
@@ -108,9 +121,7 @@ public class SaintClau : EnemyBase
 
     private void CheckAttack()
     {
-        float distance = Vector3.Distance(Player.transform.position, transform.position);
-
-        if (distance >= attackRange)
+        if (Time.time - _transformTime < 9f)
             return;
         
         if (Time.time - _lastAttackTime > attackCooldown && IsInMeleeRange())
