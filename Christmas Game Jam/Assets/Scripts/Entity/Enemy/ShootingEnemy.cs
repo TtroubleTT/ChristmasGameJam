@@ -9,9 +9,17 @@ public class ShootingEnemy : EnemyBase
     
     protected override float CurrentHealth { get; set; }
 
+    protected override float DistanceToKeepFromPlayer { get; set; }
+
+    protected override float MovementSpeed { get; set; }
+
+    protected override CharacterController CharacterController { get; set; }
+
     [Header("Enemy Stats")]
     [SerializeField] private float maxHealth = 50f;
     [SerializeField] private float currentHealth = 50f;
+    [SerializeField] private float distanceToKeepFromPlayer = 20f;
+    [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float shotRange = 30f;
     [SerializeField] private float shotCooldown = 3f;
     private float _lastShotTime;
@@ -24,8 +32,7 @@ public class ShootingEnemy : EnemyBase
     [Header("References")] 
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootTransformation;
-    private GameObject _player;
-    private Transform _playerTransform;
+    [SerializeField] private CharacterController controller;
 
     // Projectile Stats
     public enum Stats
@@ -37,17 +44,13 @@ public class ShootingEnemy : EnemyBase
     
     private readonly Dictionary<Stats, float> _projectileStats = new();
 
-    public override bool SubtractHealth(float amount)
-    {
-        bool stillAlive = base.SubtractHealth(amount);
-
-        return stillAlive;
-    }
-    
     protected override void InitializeAbstractedStats()
     {
         MaxHealth = maxHealth;
         CurrentHealth = currentHealth;
+        DistanceToKeepFromPlayer = distanceToKeepFromPlayer;
+        MovementSpeed = movementSpeed;
+        CharacterController = controller;
     }
 
     private void InitializeStats()
@@ -61,23 +64,19 @@ public class ShootingEnemy : EnemyBase
     {
         InitializeStats();
         InitializeAbstractedStats();
-        
-        _player = GameObject.FindGameObjectWithTag("Player");
-        _playerTransform = _player.transform;
     }
 
     private void Update()
     {
-        Vector3 playerPos = _playerTransform.position;
-        Vector3 lookPoint = new Vector3(playerPos.x, transform.position.y, playerPos.z);
-        transform.LookAt(lookPoint);
+        LookAtPlayer();
+        MoveTowardsPlayer();
         CheckShoot();
     }
 
     // Checks if the distance between player and enemy is within the range they are allowed to fire
     private bool IsInRange()
     {
-        float distance = Vector3.Distance(_player.transform.position, transform.position);
+        float distance = Vector3.Distance(Player.transform.position, transform.position);
 
         if (distance <= shotRange)
             return true;
@@ -88,9 +87,9 @@ public class ShootingEnemy : EnemyBase
     // Checks if the player is within the enemies line of sight
     private bool InLineOfSight()
     {
-        if (Physics.Raycast(transform.position + transform.up, (_player.transform.position - transform.position), out RaycastHit hitInfo, shotRange))
+        if (Physics.Raycast(transform.position + transform.up, (Player.transform.position - transform.position), out RaycastHit hitInfo, shotRange))
         {
-            if (hitInfo.transform.gameObject == _player)
+            if (hitInfo.transform.gameObject == Player)
             {
                 return true;
             }
@@ -112,8 +111,8 @@ public class ShootingEnemy : EnemyBase
     private void Shoot()
     {
         Transform myTransform = shootTransformation;
-        GameObject projectile = Instantiate(projectilePrefab, myTransform.position + (myTransform.forward * 2) + myTransform.up, myTransform.rotation);
-        Vector3 direction = (_player.transform.position - transform.position).normalized; // Gets direction of player
+        GameObject projectile = Instantiate(projectilePrefab, myTransform.position + myTransform.forward + myTransform.up, myTransform.rotation);
+        Vector3 direction = (Player.transform.position - transform.position).normalized; // Gets direction of player
         projectile.GetComponent<ShootingProjectile>().ProjectileInitialize(_projectileStats, direction);
     }
 }
