@@ -282,10 +282,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1671631017}
   m_SourcePrefab: {fileID: 100100000, guid: ae79364aca7e6e74b8b8d8300b504d29, type: 3}
---- !u!82 &125119721 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6961477653795942964, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
-  m_PrefabInstance: {fileID: 1223107196}
+--- !u!1 &118530987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3258353340998219833, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
+  m_PrefabInstance: {fileID: 1673916333}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &211664763 stripped
 GameObject:
@@ -968,14 +968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 6423693750399704272, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
-      propertyPath: m_Name
-      value: Voicelines
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480852194701500517, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 5143882537234331355, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
+      propertyPath: bonkStick
+      value: 
+      objectReference: {fileID: 118530987}
     - target: {fileID: 8752925074813168700, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1227.4333
@@ -1016,14 +1012,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1273818407810172574, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5033396417180822447, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2095536233}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
 --- !u!1 &1242676387 stripped
 GameObject:
@@ -1051,11 +1043,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 17, y: 13, z: 16}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &1328813818 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 703442951955784279, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
-  m_PrefabInstance: {fileID: 1223107196}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1361268690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 117628, guid: 04c19027b30bcaa489b3ec4b42040dea, type: 3}
@@ -1325,7 +1312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3258353340998219833, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3887917093814353454, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
       propertyPath: m_Name
@@ -1797,30 +1784,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
---- !u!1 &2095536232 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5033396417180822447, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
-  m_PrefabInstance: {fileID: 1223107196}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2095536233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095536232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db60db2f476276c488434ac652e5df3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 125119721}
-  voicelineSource: {fileID: 1328813818}
-  scene1FirstLine: {fileID: 8300000, guid: 441512c896ccd6a489d99447f9cbff63, type: 3}
-  scene1SecondLine: {fileID: 8300000, guid: 68c1ea56a2e946d48b42091a4b716e97, type: 3}
-  scene1ThirdLine: {fileID: 8300000, guid: 77c2fb0b738b5f5478e80d33518869e9, type: 3}
-  scene1ForthLine: {fileID: 8300000, guid: dc86a65fd515f264a950014a4c432602, type: 3}
-  scene1FifthLine: {fileID: 8300000, guid: e5f6db29602a78d439786a637fde22aa, type: 3}
 --- !u!1001 &2993715579922970913
 PrefabInstance:
   m_ObjectHideFlags: 0

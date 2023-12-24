@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8752925074813168700}
-  - component: {fileID: 1273818407810172574}
+  - component: {fileID: 5143882537234331355}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: AudioManager
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 863981836018695103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1273818407810172574
+--- !u!114 &5143882537234331355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,21 +43,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5033396417180822447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e09e737f4f2a4c478378f1f45b69a33, type: 3}
+  m_Script: {fileID: 11500000, guid: db60db2f476276c488434ac652e5df3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 6961477653795942964}
-  SFXSource: {fileID: 703442951955784279}
-  background: {fileID: 8300000, guid: 89f935015cc98724a862a586326fdf21, type: 3}
-  death: {fileID: 8300000, guid: b99da9a57308d4ba1bee1cf1d9038376, type: 3}
-  walking: {fileID: 8300000, guid: 942019cf9ecd5854ebeb343b12b7f779, type: 3}
-  takingDamage: {fileID: 8300000, guid: b9eff218e132a4e76be78840eca96fb2, type: 3}
-  gainSoul: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
-  dash: {fileID: 8300000, guid: 80e397195ea2940b69ee7bdbded856a5, type: 3}
-  enemyDeath: {fileID: 8300000, guid: 4b4dd7245f6104c8c8eb07ccf6b386ed, type: 3}
-  heal: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
-  closeAttack: {fileID: 8300000, guid: 60a0682fbc82bd244bdae3f3445cfd17, type: 3}
-  projectile: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
+  voicelineSource: {fileID: 703442951955784279}
+  scene1FirstLine: {fileID: 8300000, guid: 441512c896ccd6a489d99447f9cbff63, type: 3}
+  scene1SecondLine: {fileID: 8300000, guid: 68c1ea56a2e946d48b42091a4b716e97, type: 3}
+  scene1ThirdLine: {fileID: 8300000, guid: 77c2fb0b738b5f5478e80d33518869e9, type: 3}
+  scene1ForthLine: {fileID: 8300000, guid: dc86a65fd515f264a950014a4c432602, type: 3}
+  scene1FifthLine: {fileID: 8300000, guid: e5f6db29602a78d439786a637fde22aa, type: 3}
+  bonkStick: {fileID: 0}
 --- !u!1 &6423693750399704272
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,7 +64,7 @@ GameObject:
   - component: {fileID: 863981836018695103}
   - component: {fileID: 703442951955784279}
   m_Layer: 0
-  m_Name: SFX
+  m_Name: Voicelines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4904113718026748568
 Transform:
   m_ObjectHideFlags: 0

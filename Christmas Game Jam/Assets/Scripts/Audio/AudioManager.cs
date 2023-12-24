@@ -14,6 +14,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip scene1ForthLine;
     [SerializeField] private AudioClip scene1FifthLine;
 
+    [Header("References")] 
+    [SerializeField] private GameObject bonkStick;
+
     public enum AudioType
     {
         Scene1FirstLine,
@@ -66,6 +69,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void GiveBonkStick()
+    {
+        bonkStick.SetActive(true);
+    }
+
     private IEnumerator Scene1BeginningVoicelines()
     {
         yield return new WaitForSeconds(2);
@@ -76,7 +84,9 @@ public class AudioManager : MonoBehaviour
         PlayVoiceLine(AudioType.Scene1ThirdLine);
         yield return new WaitForSeconds(4);
         PlayVoiceLine(AudioType.Scene1ForthLine);
-        yield return new WaitForSeconds(17);
+        yield return new WaitForSeconds(15);
+        GiveBonkStick();
+        yield return new WaitForSeconds(2);
         StartSpawningEnemies();
     }
 }
