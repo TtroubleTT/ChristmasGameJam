@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3372671710580358240}
   m_Layer: 0
   m_Name: SnowManSpawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,5 +119,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6451204108990411441, guid: d54ce778addd607439586600d01fa275, type: 3}
-  numberToSpawn: 0
-  timeBetweenSpawns: 0
+  numberToSpawn: 4
+  timeBetweenSpawns: 3

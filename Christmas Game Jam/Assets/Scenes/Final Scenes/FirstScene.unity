@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3372671710580358240, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: timeBetweenSpawns
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_Name
@@ -145,7 +145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
+      propertyPath: m_TagString
+      value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8186189989987371535, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_LocalPosition.x
@@ -769,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3372671710580358240, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: timeBetweenSpawns
-      value: 10
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_Name
@@ -777,7 +781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
+      propertyPath: m_TagString
+      value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8186189989987371535, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1730,7 +1738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3372671710580358240, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: timeBetweenSpawns
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_Name
@@ -1738,7 +1746,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
+      propertyPath: m_TagString
+      value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8186189989987371535, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1818,20 +1830,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3372671710580358240, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
-      propertyPath: numberToSpawn
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3372671710580358240, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: timeBetweenSpawns
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_Name
       value: SnowManSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 3833575570292363453, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8186189989987371535, guid: 207cf3a689ce1c1488619a8fae34b273, type: 3}
       propertyPath: m_LocalPosition.x

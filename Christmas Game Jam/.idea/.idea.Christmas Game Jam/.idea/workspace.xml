@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7f77ee38-80c1-4677-96c3-e464c8518100" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Snowman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Snowman.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SnowManSpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SnowManSpawner.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/FirstScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/FirstScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/TrubTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/TrubTesting.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/MeleeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/MeleeEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/ShootingEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entity/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,7 @@
       <workItem from="1703197089831" duration="3394000" />
       <workItem from="1703221114576" duration="13439000" />
       <workItem from="1703310502641" duration="15034000" />
-      <workItem from="1703404077605" duration="7069000" />
+      <workItem from="1703404077605" duration="8183000" />
     </task>
     <servers />
   </component>

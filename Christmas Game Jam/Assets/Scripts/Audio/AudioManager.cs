@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource voicelineSource;
     
     [Header("VoiceLines")]
@@ -58,6 +57,15 @@ public class AudioManager : MonoBehaviour
         */
     }
 
+    private void StartSpawningEnemies()
+    {
+        GameObject[] spawners = GameObject.FindGameObjectsWithTag("Spawner");
+        foreach (GameObject spawner in spawners)
+        {
+            spawner.GetComponent<EnemySpawner>().StartSpawn();
+        }
+    }
+
     private IEnumerator Scene1BeginningVoicelines()
     {
         yield return new WaitForSeconds(2);
@@ -68,5 +76,7 @@ public class AudioManager : MonoBehaviour
         PlayVoiceLine(AudioType.Scene1ThirdLine);
         yield return new WaitForSeconds(4);
         PlayVoiceLine(AudioType.Scene1ForthLine);
+        yield return new WaitForSeconds(17);
+        StartSpawningEnemies();
     }
 }

@@ -9,12 +9,12 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float numberToSpawn;
     [SerializeField] private float timeBetweenSpawns;
 
-    private void Start()
+    public void StartSpawn()
     {
         StartCoroutine(StartEnemySpawning());
     }
-
-    IEnumerator StartEnemySpawning()
+    
+    private IEnumerator StartEnemySpawning()
     {
         for (int i = 0; i < numberToSpawn; i++)
         {
