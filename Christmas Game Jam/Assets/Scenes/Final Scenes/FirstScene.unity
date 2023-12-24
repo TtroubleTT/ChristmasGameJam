@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: e09cd3ae4c71bc441a97e0ea74e22570, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -969,6 +969,10 @@ PrefabInstance:
       value: Audio Manager
       objectReference: {fileID: 0}
     - target: {fileID: 5143882537234331355, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
+      propertyPath: laserGun
+      value: 
+      objectReference: {fileID: 1475828178}
+    - target: {fileID: 5143882537234331355, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
       propertyPath: bonkStick
       value: 
       objectReference: {fileID: 118530987}
@@ -1133,6 +1137,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1361268691}
   m_SourcePrefab: {fileID: 100100000, guid: 04c19027b30bcaa489b3ec4b42040dea, type: 3}
+--- !u!1 &1475828178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4716855763602046912, guid: 9ef69c5e58b1c1f4eb63d94739febf95, type: 3}
+  m_PrefabInstance: {fileID: 1673916333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1498506206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 193488, guid: ed8ca91ea98dcb54397b4145af6c0b2e, type: 3}

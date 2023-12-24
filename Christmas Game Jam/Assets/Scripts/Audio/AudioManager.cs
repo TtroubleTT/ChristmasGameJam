@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("References")] 
     [SerializeField] private GameObject bonkStick;
+    [SerializeField] private GameObject laserGun;
     [SerializeField] private int numberOfEnemies;
     private int _currentEnemiesKilled = 0;
 
@@ -76,13 +78,19 @@ public class AudioManager : MonoBehaviour
         bonkStick.SetActive(true);
     }
 
+    private void GiveLaserGun()
+    {
+        bonkStick.SetActive(false);
+        laserGun.SetActive(true);
+    }
+
     public void CheckIfEndSceneOne()
     {
         _currentEnemiesKilled++;
 
         if (_currentEnemiesKilled >= numberOfEnemies)
         {
-            PlayVoiceLine(AudioType.Scene1FifthLine);
+            StartCoroutine(Scene1EndingVoicelines());
         }
     }
 
@@ -100,5 +108,14 @@ public class AudioManager : MonoBehaviour
         GiveBonkStick();
         yield return new WaitForSeconds(2);
         StartSpawningEnemies();
+    }
+    
+    private IEnumerator Scene1EndingVoicelines()
+    {
+        PlayVoiceLine(AudioType.Scene1FifthLine);
+        yield return new WaitForSeconds(10);
+        GiveLaserGun();
+        yield return new WaitForSeconds(10);
+        SceneManager.LoadScene("SecondScene");
     }
 }
