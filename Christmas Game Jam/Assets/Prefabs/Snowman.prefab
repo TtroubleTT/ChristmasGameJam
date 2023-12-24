@@ -161,6 +161,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8702900830103643964, guid: c4a259e6d00ed1044b8a5472b1b25367, type: 3}
   shootTransformation: {fileID: 6454505248393878323}
   controller: {fileID: 7813440810214175353}
+  audioManager: {fileID: 5143882537234331355, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
 --- !u!54 &1134833575992574697
 Rigidbody:
   m_ObjectHideFlags: 0

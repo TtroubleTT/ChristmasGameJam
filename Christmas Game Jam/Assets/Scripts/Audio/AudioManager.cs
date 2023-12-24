@@ -16,6 +16,8 @@ public class AudioManager : MonoBehaviour
 
     [Header("References")] 
     [SerializeField] private GameObject bonkStick;
+    [SerializeField] private int numberOfEnemies;
+    private int _currentEnemiesKilled = 0;
 
     public enum AudioType
     {
@@ -72,6 +74,16 @@ public class AudioManager : MonoBehaviour
     private void GiveBonkStick()
     {
         bonkStick.SetActive(true);
+    }
+
+    public void CheckIfEndSceneOne()
+    {
+        _currentEnemiesKilled++;
+
+        if (_currentEnemiesKilled >= numberOfEnemies)
+        {
+            PlayVoiceLine(AudioType.Scene1FifthLine);
+        }
     }
 
     private IEnumerator Scene1BeginningVoicelines()

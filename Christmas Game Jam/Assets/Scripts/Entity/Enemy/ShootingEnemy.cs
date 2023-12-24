@@ -33,6 +33,7 @@ public class ShootingEnemy : EnemyBase
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootTransformation;
     [SerializeField] private CharacterController controller;
+    private AudioManager _audioManager;
 
     // Projectile Stats
     public enum Stats
@@ -53,6 +54,12 @@ public class ShootingEnemy : EnemyBase
         CharacterController = controller;
     }
 
+    protected override void Die()
+    {
+        base.Die();
+        _audioManager.CheckIfEndSceneOne();
+    }
+
     private void InitializeStats()
     {
         _projectileStats.Add(Stats.Damage, damage);
@@ -64,6 +71,7 @@ public class ShootingEnemy : EnemyBase
     {
         InitializeStats();
         InitializeAbstractedStats();
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     private void Update()

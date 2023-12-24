@@ -972,6 +972,10 @@ PrefabInstance:
       propertyPath: bonkStick
       value: 
       objectReference: {fileID: 118530987}
+    - target: {fileID: 5143882537234331355, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
+      propertyPath: numberOfEnemies
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8752925074813168700, guid: 2ec76d981e822ae4280cd110c7191522, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1227.4333
