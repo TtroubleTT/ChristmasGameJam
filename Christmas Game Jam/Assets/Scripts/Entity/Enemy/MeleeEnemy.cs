@@ -45,6 +45,7 @@ public class MeleeEnemy : EnemyBase
     
     private void Update()
     {
+        Gravity();
         LookAtPlayer();
         MoveTowardsPlayer();
         CheckAttack();

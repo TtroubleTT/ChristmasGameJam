@@ -68,6 +68,7 @@ public class ShootingEnemy : EnemyBase
 
     private void Update()
     {
+        Gravity();
         LookAtPlayer();
         MoveTowardsPlayer();
         CheckShoot();
