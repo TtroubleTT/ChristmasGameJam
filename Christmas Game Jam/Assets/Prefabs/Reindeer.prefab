@@ -290,5 +290,5 @@ MonoBehaviour:
   movementSpeed: 20
   attackRange: 6
   attackCooldown: 3
-  damage: 20
+  damage: 10
   controller: {fileID: 1299976366972594213}

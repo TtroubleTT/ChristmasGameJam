@@ -27,7 +27,14 @@ public class MeleeEnemy : EnemyBase
     [Header("References")] 
     [SerializeField] private CharacterController controller;
     private PlayerBase _playerBase;
+    private AudioManager2 _audioManager;
 
+    protected override void Die()
+    {
+        base.Die();
+        _audioManager.CheckIfEndSceneTwo();
+    }
+    
     protected override void InitializeAbstractedStats()
     {
         MaxHealth = maxHealth;
@@ -41,6 +48,7 @@ public class MeleeEnemy : EnemyBase
     {
         InitializeAbstractedStats();
         _playerBase = Player.GetComponent<PlayerBase>();
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager2>();
     }
     
     private void Update()
