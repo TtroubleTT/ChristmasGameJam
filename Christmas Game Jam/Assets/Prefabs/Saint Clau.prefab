@@ -294,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98cbfc70871d1bc478c07764fd8c462b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98cbfc70871d1bc478c07764fd8c462b, type: 3}
       propertyPath: m_TagString
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fea29cf226e2484bb72f5891ab2710c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFirstFormHealth: 500
-  maxSecondFormHealth: 500
-  currentHealth: 500
+  maxFirstFormHealth: 50
+  maxSecondFormHealth: 50
+  currentHealth: 50
   distanceToKeepFromPlayerFirstForm: 20
   distanceToKeepFromPlayerSecondForm: 5
   movementSpeedFirstForm: 10

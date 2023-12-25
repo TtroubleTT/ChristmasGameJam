@@ -849,22 +849,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saint Clau
       objectReference: {fileID: 0}
-    - target: {fileID: 2701901306898123558, guid: 2e288dadc2b57af4faaa2624c7cf711d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831585063497790599, guid: 2e288dadc2b57af4faaa2624c7cf711d, type: 3}
-      propertyPath: currentHealth
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831585063497790599, guid: 2e288dadc2b57af4faaa2624c7cf711d, type: 3}
-      propertyPath: maxFirstFormHealth
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831585063497790599, guid: 2e288dadc2b57af4faaa2624c7cf711d, type: 3}
-      propertyPath: maxSecondFormHealth
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 3329501807002243484, guid: 2e288dadc2b57af4faaa2624c7cf711d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.76
