@@ -6,10 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="7f77ee38-80c1-4677-96c3-e464c8518100" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Christmas Game Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Saint Clau.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Saint Clau.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/FinalScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/FinalScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/SecondScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/SecondScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/TrubTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/TrubTesting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/ANVIL.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/ANVIL.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/ARE YOU HIGH.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/ARE YOU HIGH.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/But its so fun to watch.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/But its so fun to watch.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Hows it banging.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Hows it banging.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/I wanted to be a washing machine.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/I wanted to be a washing machine.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Im in your heart.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Im in your heart.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Maybe the real anvil.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Maybe the real anvil.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/SoYaAnAnvilRt.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/SoYaAnAnvilRt.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/This is a bit Crushing.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/This is a bit Crushing.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Voice keeps changing.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Voice keeps changing.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Yeah so.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/Yeah so.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/sigh do do do.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Voicelines/sigh do do do.mp3.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +121,7 @@
       <workItem from="1703221114576" duration="13439000" />
       <workItem from="1703310502641" duration="15034000" />
       <workItem from="1703404077605" duration="9942000" />
-      <workItem from="1703459637387" duration="4520000" />
+      <workItem from="1703459637387" duration="5256000" />
     </task>
     <servers />
   </component>
